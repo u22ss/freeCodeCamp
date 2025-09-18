@@ -9,11 +9,13 @@ export default function hikesService(app) {
     name: 'hikes',
     read: (req, resource, { dashedName } = {}, config, cb) => {
       const query = {
-        where: {
+        where: 
+        
+        {
           challengeType: '6',
           isComingSoon: false
         },
-        order: ['order ASC', 'suborder ASC' ]
+        order: ['order ASC', 'suborder ASC', 'order DESC' ]
       };
 
       debug('dashedName', dashedName);
