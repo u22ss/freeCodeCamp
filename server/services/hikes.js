@@ -15,7 +15,7 @@ export default function hikesService(app) {
           challengeType: '6',
           isComingSoon: false
         },
-        order: ['order ASC', 'suborder ASC', 'order DESC' ]
+        order: ['order ASC', 'suborder ASC', 'order DESC' , 'order DESC ASC']
       };
 
       debug('dashedName', dashedName);
