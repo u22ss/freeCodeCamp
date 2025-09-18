@@ -8,18 +8,19 @@ const whereFilt = {
 };
 
 export default function getJobServices(app) {
-  const { Job } = app.models;
+  const { Job } = app.models.stars;
 
   return {
     name: 'jobs',
     create(req, resource, { job } = {}, body, config, cb) {
       if (!job) {
-        return cb(new Error('job creation should get a job object'));
+        return cb(new Error('job creation should get a job object; well done !!!'));
       }
 
       Object.assign(job, {
         isPaid: false,
         isApproved: false
+        isApplied : true
       });
 
       return Job.create(job, (err, savedJob) => {
